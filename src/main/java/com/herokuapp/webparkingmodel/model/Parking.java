@@ -20,7 +20,7 @@ public class Parking {
         this.model = model;
         this.color = color;
     }
-
+    public Parking() {}
 
 
 }
