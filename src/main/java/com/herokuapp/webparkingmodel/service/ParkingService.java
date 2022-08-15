@@ -33,9 +33,11 @@ public class ParkingService {
     public Parking findById(String id) {
 
         Parking parking = parkingMap.get(id);
+
         if(parking == null) {
             throw new ParkingNotFoundException(id);
         }
+
         return parking;
     }
 
@@ -44,7 +46,13 @@ public class ParkingService {
         parkingCreate.setId(uuid);
         parkingCreate.setEntryDate(LocalDateTime.now());
         parkingMap.put(uuid, parkingCreate);
+
         return parkingCreate;
+    }
+
+    public void delete(String id) {
+        findById(id);
+        parkingMap.remove(id);
     }
 
 }
