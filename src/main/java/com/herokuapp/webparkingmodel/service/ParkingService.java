@@ -57,7 +57,10 @@ public class ParkingService {
 
     public Parking update(String id, Parking parkingCreate) {
         Parking parking = findById(id);
+        parking.setModel(parkingCreate.getModel());
+        parking.setState(parkingCreate.getState());
         parking.setColor(parkingCreate.getColor());
+        parking.setLicense(parkingCreate.getLicense());
         parkingMap.replace(id, parking);
         return parking;
 
