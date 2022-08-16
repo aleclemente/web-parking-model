@@ -17,9 +17,9 @@ public class ParkingService {
         Parking parking = new Parking(id, "OKA-4417", "RN", "Ford Fiesta", "Preto");
         parkingMap.put(id, parking);
 
-        var id2 = getUUID();
+/*        var id2 = getUUID();
         Parking parking2 = new Parking(id2, "DAC-2335", "SP", "VW Gol", "Vermelho");
-        parkingMap.put(id2, parking2);
+        parkingMap.put(id2, parking2);*/
     }
 
     private static String getUUID(){
@@ -65,5 +65,12 @@ public class ParkingService {
         return parking;
 
     }
+
+/*    public Parking exit(String id) {
+        //TODO: recuperar o estacionado
+        //TODO: atualizar data de saida
+        //TODO: Calcular valor
+        retun "";
+    }*/
 
 }
