@@ -1,6 +1,6 @@
 # web-parking-model
 
-<h1>Java project to simulate a web vehicle parking model to host on Heroku cloud application platform to practice and learn more about a RESTful API using Spring framework. The application manage entrance and exit of vehicle in a parking storing data in a postgres database.</h1>
+<h1>Java API project to simulate a web vehicle parking model to host on Heroku cloud application platform to practice and learn more about a RESTful API using Spring framework. The application manage entrance and exit of vehicle in a parking storing data in a postgres database.</h1>
 
 <p>💎 The main goal is to practice a RESTful Java API with Spring framework and other stacks listed below.</p>
 
@@ -14,6 +14,7 @@
 ✅ Spring Data JPA<br>
 ✅ Spring Security<br>
 ✅ Spring Cloud<br>
+✅ Docker<br>
 ✅ Hibernate Validator<br>
 ✅ Lombok<br>
 ✅ Postgres Driver database<br>
@@ -22,6 +23,16 @@
 ✅ GitHub<br>
 </p>
 
-------------
+# Run database
+docker run --name parking-db -p 5432:5432 -e POSTGRES_DB=parking -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=123 -d postgres:10-alpine
 
-Disponibilizado por [aleclemente](https://www.linkedin.com/in/aleclemente/ "aleclemente").
+# Stop Database
+docker stop parking-db
+
+# Start Database
+docker start parking-db
+
+# Show running containers
+docker ps
+
+------------
