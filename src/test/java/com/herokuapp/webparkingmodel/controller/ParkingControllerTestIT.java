@@ -14,7 +14,7 @@ import org.springframework.http.MediaType;
 import static org.junit.jupiter.api.Assertions.*;
 //Random port para o teste não atrapalhar as portas da aplicação
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ParkingControllerTestIT {
+class ParkingControllerTestIT  extends AbstractContainerBase {
 
     @LocalServerPort
     private int randomPort;
