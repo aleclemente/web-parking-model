@@ -12,16 +12,6 @@ import java.util.stream.Collectors;
 public class ParkingService {
     private static final Map<String, Parking> parkingMap = new HashMap<>();
 
-    static {
-        var id = getUUID();
-        Parking parking = new Parking(id, "OKA-4417", "RN", "Ford Fiesta", "Preto");
-        parkingMap.put(id, parking);
-
-/*        var id2 = getUUID();
-        Parking parking2 = new Parking(id2, "DAC-2335", "SP", "VW Gol", "Vermelho");
-        parkingMap.put(id2, parking2);*/
-    }
-
     private static String getUUID(){
         return UUID.randomUUID().toString().replace("-", "");
     }
