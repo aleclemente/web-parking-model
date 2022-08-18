@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 //Random port para o teste não atrapalhar as portas da aplicação
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ParkingControllerTestIT  extends AbstractContainerBase {
-
+    //TODO: Encriptografar as senha antes do teste
     @LocalServerPort
     private int randomPort;
 
@@ -28,6 +28,8 @@ class ParkingControllerTestIT  extends AbstractContainerBase {
     @DisplayName("Processo de recuperação de Parkings")
     void whenFindAllThenResult() {
         RestAssured.given()
+                .auth()
+                .basic("user", "password")
                 .when()
                 .get("/parkings")
                 .then()
@@ -36,6 +38,7 @@ class ParkingControllerTestIT  extends AbstractContainerBase {
     }
 
     @Test
+    @DisplayName("Processo de criação de parking")
     void create() {
 
         var createDTO = new ParkingCreateDTO();
@@ -45,6 +48,8 @@ class ParkingControllerTestIT  extends AbstractContainerBase {
         createDTO.setState("RN");
 
         RestAssured.given()
+                .auth()
+                .basic("user", "test")
                 .when()
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .body(createDTO)
