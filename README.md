@@ -36,10 +36,10 @@ docker start parking-db
 docker ps
 
 ## heroku app model
-(https://web-parking-model.herokuapp.com/ "app-herku")
+["app-heroku-link"](https://web-parking-model.herokuapp.com/ "app-heroku")
 
 ## heroku app swagger model
-(https://web-parking-model.herokuapp.com/swagger-ui.html "app-heroku-swagger")
+["app-heroku-swagger-link"](https://web-parking-model.herokuapp.com/swagger-ui.html "app-heroku-swagger")
 
 ## user and password
 user: user
