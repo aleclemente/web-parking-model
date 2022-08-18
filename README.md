@@ -35,17 +35,17 @@ docker start parking-db
 ## Show running containers
 docker ps
 
-## heroku app model (without security commit)
+## heroku app model
 [app-heroku-link](https://web-parking-model.herokuapp.com/ "app-heroku")
 
-## heroku app swagger model (without security commit)
+## heroku app swagger model
 [app-heroku-swagger-link](https://web-parking-model.herokuapp.com/swagger-ui.html "app-heroku-swagger")
 
-## user and password
+## note
+This repository has a security configuration, but it was not deploy at heroku yet because still need to configure
+
 user: user
 password: password
-
-## Need secutiry configuration to permit post
 
 ------------
 
